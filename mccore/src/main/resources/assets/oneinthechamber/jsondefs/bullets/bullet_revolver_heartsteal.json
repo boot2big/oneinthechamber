@@ -1,0 +1,83 @@
+{
+  "bullet": {
+    "types": [
+      "armor_piercing"
+    ],
+    "seekerRange": 1024,
+    "seekerMaxAngle": 90.0,
+    "quantity": 1,
+    "diameter": 12.7,
+    "damage": 2.14748365E9,
+    "caseLength": 99.3,
+    "armorPenetration": 2.14748365E9,
+    "despawnTime": 40
+  },
+  "definitions": [
+    {
+      "hideOnCreativeTab": true,
+      "subName": "",
+      "modelName": "bullet_tracer",
+      "name": "Revolver Heartsteal Ammo",
+      "textureNames": [
+        "bullet_tracer"
+      ],
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "animatedObjects": [],
+    "lightObjects": [],
+    "sounds": [],
+    "particles": [
+      {
+        "type": "generic",
+        "ignoreCollision": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "fixed",
+        "quantity": 1,
+        "distance": 1.0,
+        "duration": 5,
+        "transparency": 0.5,
+        "fadeOutTransparencyTime": 5,
+        "scale": 1.0,
+        "hitboxSize": 0.1,
+        "texture": "oneinthechamber:textures/particles/tracer.png",
+        "model": "oneinthechamber:textures/particles/tracer_3d.obj",
+        "color": "FFFFFF",
+        "pos": [0.0,0.0,0.0],
+        "rot": [0.0,0.0,0.0],
+        "initialVelocity": [0.0,0.0,1.0E-8],
+        "movementVelocity": [0.0,0.0,1.0E-8],
+        "terminalVelocity": [1.0E-8,1.0E-8,1.0E-8],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "tick",
+            "offset": 0.0,
+            "clampMin": 1.0,
+            "clampMax": 32767.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "bullet_hit",
+            "offset": 0.0,
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          }
+        ]
+      }
+    ],
+    "modelType": "obj"
+  },
+  "general": {
+    "stackSize": 64,
+    "materialLists": [
+      []
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0,
+    "type": "bullet"
+  }
+}
