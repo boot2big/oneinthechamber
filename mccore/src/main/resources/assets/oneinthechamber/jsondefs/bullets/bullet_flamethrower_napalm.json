@@ -1,0 +1,148 @@
+{
+  "bullet": {
+    "types": [
+      "incendiary"
+    ],
+    "seekerRange": 1024,
+    "seekerMaxAngle": 90.0,
+    "quantity": 1,
+    "diameter": 19.05,
+    "damage": 0.75,
+    "caseLength": 375.0,
+    "knockback": 0.0375,
+    "slowdownSpeed": 0.0875,
+    "gravitationalVelocity": -0.002,
+    "despawnTime": 20,
+    "pellets": 20,
+    "pelletSpreadFactor": 20.0
+  },
+  "definitions": [
+    {
+      "subName": "",
+      "modelName": "flame",
+      "name": "Napalm Canister",
+      "textureNames": [
+        "flame"
+      ],
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "animatedObjects": [],
+    "lightObjects": [],
+    "sounds": [],
+    "particles": [
+      {
+        "type": "generic",
+        "spawnEveryTick": true,
+        "ignoreCollision": true,
+        "spawningOrientation": "attached",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 4,
+        "transparency": 0.5,
+        "fadeOutTransparencyTime": 2,
+        "scale": 1.0,
+        "hitboxSize": 0.1,
+        "textureList": [
+          "mtsofficialpack:textures/bullets/fire0.png",
+          "mtsofficialpack:textures/bullets/fire1.png",
+          "mtsofficialpack:textures/bullets/fire2.png",
+          "mtsofficialpack:textures/bullets/fire3.png",
+          "mtsofficialpack:textures/bullets/fire4.png",
+          "mtsofficialpack:textures/bullets/fire5.png",
+          "mtsofficialpack:textures/bullets/fire6.png"
+        ],
+        "textureDelays": [3,3,3,3,3,3,3],
+        "randomTexture": true,
+        "color": "FFFFFF",
+        "pos": [0.0,0.0,0.0],
+        "rot": [0.0,180.0,0.0],
+        "rotationRandomness": [0.0,0.0,10.0],
+        "initialVelocity": [0.0,0.0,1.0E-8],
+        "movementVelocity": [0.0,0.0,1.0E-8],
+        "terminalVelocity": [1.0E-8,1.0E-8,1.0E-8],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "tick",
+            "offset": 0.0,
+            "clampMin": 1.0,
+            "clampMax": 18.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "bullet_hit",
+            "offset": 0.0,
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          }
+        ]
+      },
+      {
+        "type": "smoke",
+        "spawnEveryTick": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "player",
+        "quantity": 1,
+        "duration": 30,
+        "transparency": 0.375,
+        "fadeOutTransparencyTime": 10,
+        "scale": 2.0,
+        "toScale": 4.0,
+        "hitboxSize": 0.1,
+        "color": "CECECE",
+        "pos": [0.0,0.0,0.0],
+        "rot": [0.0,180.0,0.0],
+        "initialVelocity": [0.0,-0.04,0.02],
+        "movementVelocity": [0.0,0.03,-0.01],
+        "terminalVelocity": [32.0,8.0,32.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "0_2_2_cycle",
+            "offset": 0.0,
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "tick",
+            "offset": 0.0,
+            "clampMin": 2.0,
+            "clampMax": 18.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "random",
+            "offset": 0.0,
+            "clampMin": 0.75,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "bullet_hit",
+            "offset": 0.0,
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          }
+        ]
+      }
+    ],
+    "modelType": "obj"
+  },
+  "general": {
+    "stackSize": 24,
+    "materialLists": [
+      [
+        "oredict:nuggetIron:2",
+        "minecraft:gunpowder:0:1"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0,
+    "type": "bullet"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "item": {
+    "type": "none"
+  },
+  "general": {
+    "hideOnCreativeTab": true,
+    "name": "One in the Chamber Logo",
+    "stackSize": 64,
+    "materialLists": [
+      []
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
+}

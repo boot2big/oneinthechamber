@@ -10,7 +10,9 @@
     "knockback": 0.015625,
     "despawnTime": 60,
     "pellets": 32,
-    "pelletSpreadFactor": 8.0
+    "pelletSpreadFactor": 8.0,
+    "casingModel": "oneinthechamber:textures/particles/casing_bullet.obj",
+    "casingTexture": "oneinthechamber:textures/particles/casing_bullet_birdshot.png"
   },
   "definitions": [
     {

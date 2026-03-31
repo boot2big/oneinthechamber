@@ -11,7 +11,9 @@
     "armorPenetration": 8.0,
     "despawnTime": 40,
     "pellets": 8,
-    "pelletSpreadFactor": 1.0
+    "pelletSpreadFactor": 1.0,
+    "casingModel": "oneinthechamber:textures/particles/casing_shell.obj",
+    "casingTexture": "oneinthechamber:textures/particles/casing_shell_buckshot.png"
   },
   "definitions": [
     {

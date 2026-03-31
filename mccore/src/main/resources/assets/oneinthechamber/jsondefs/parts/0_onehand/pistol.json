@@ -13,9 +13,9 @@
     "handHeld": true,
     "isSemiAuto": true,
     "capacity": 1,
-    "fireDelay": 7,
     "reloadTime": 8,
     "muzzleVelocity": 250,
+    "fireDelay": 9.0,
     "bulletSpreadFactor": 3.0,
     "diameter": 11.5,
     "minCaseLength": 32.0,
@@ -47,13 +47,27 @@
     {
       "subName": "",
       "name": "Pistol",
-      "description": "Semi-automatic handheld firearm",
+      "description": "Semi-automatic handheld firearm\nStandard issue, and a hard classic to beat.\n",
       "extraMaterialLists": [
         []
       ]
     }
   ],
   "variableModifiers": [
+    {
+      "variable": "ableToFire",
+      "animations": [
+        {
+          "animationType": "translation",
+          "variable": "gun_inhand_equipped",
+          "axis": [0.0,0.0,1.0],
+          "offset": 0.0,
+          "clampMin": 0.0,
+          "clampMax": 0.0,
+          "forwardsDelay": 5
+        }
+      ]
+    },
     {
       "variable": "yawRecoil",
       "animations": [
@@ -83,6 +97,16 @@
     {
       "variable": "pitchRecovery",
       "animations": [
+        {
+          "animationType": "translation",
+          "variable": "gun_firing",
+          "axis": [-1.0,0.0,0.0],
+          "offset": 1.0,
+          "clampMin": 0.0,
+          "clampMax": 0.0,
+          "forwardsDelay": 9,
+          "reverseDelay": 4
+        },
         {
           "animationType": "translation",
           "variable": "gun_inhand_aiming",
@@ -137,6 +161,18 @@
             "forwardsEasing": "easeoutcirc",
             "reverseEasing": "easeinoutsine",
             "skipForwardsMovement": true
+          },
+          {
+            "animationType": "rotation",
+            "variable": "!gun_inhand_equipped",
+            "centerPoint": [0.0,0.0,-0.5],
+            "axis": [90.0,0.0,0.0],
+            "offset": 0.0,
+            "clampMin": 0.0,
+            "clampMax": 0.0,
+            "duration": 5,
+            "forwardsEasing": "easeinback",
+            "reverseEasing": "easeoutback"
           }
         ]
       },
@@ -236,6 +272,36 @@
         "initialVelocity": [0.0,0.0,1.0E-8],
         "movementVelocity": [0.0,0.0,1.0E-8],
         "terminalVelocity": [1.0E-8,1.0E-8,1.0E-8],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_fired",
+            "offset": 0.0,
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
+      },
+      {
+        "type": "casing",
+        "stopsOnGround": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "fixed",
+        "quantity": 1,
+        "duration": 120,
+        "transparency": 1.0,
+        "fadeOutTransparencyTime": 20,
+        "scale": 0.5,
+        "toScale": 0.5,
+        "hitboxSize": 0.1,
+        "color": "FFFFFF",
+        "pos": [0.0,0.0625,-0.0625],
+        "rot": [0.0,0.0,0.0],
+        "rotationRandomness": [5.0,5.0,5.0],
+        "rotationVelocity": [-8.0,4.0,0.0],
+        "initialVelocity": [-1.0,0.5,-0.25],
+        "movementVelocity": [0.0,-0.02,0.0],
+        "terminalVelocity": [64.0,64.0,64.0],
         "activeAnimations": [
           {
             "animationType": "visibility",

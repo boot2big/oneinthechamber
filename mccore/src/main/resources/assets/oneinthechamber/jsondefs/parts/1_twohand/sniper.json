@@ -14,9 +14,9 @@
     "isTwoHanded": true,
     "isSemiAuto": true,
     "capacity": 1,
-    "fireDelay": 36,
     "reloadTime": 35,
     "muzzleVelocity": 250,
+    "fireDelay": 36.0,
     "diameter": 11.63,
     "minCaseLength": 36.0,
     "maxCaseLength": 84.8,
@@ -45,13 +45,27 @@
     {
       "subName": "",
       "name": "Sniper Rifle",
-      "description": "Bolt-action longarm",
+      "description": "Bolt-action longarm\nPays the bills.\n",
       "extraMaterialLists": [
         []
       ]
     }
   ],
   "variableModifiers": [
+    {
+      "variable": "ableToFire",
+      "animations": [
+        {
+          "animationType": "translation",
+          "variable": "gun_inhand_equipped",
+          "axis": [0.0,0.0,1.0],
+          "offset": 0.0,
+          "clampMin": 0.0,
+          "clampMax": 0.0,
+          "forwardsDelay": 20
+        }
+      ]
+    },
     {
       "variable": "yawRecoil",
       "animations": [
@@ -135,6 +149,18 @@
             "forwardsEasing": "easeoutcirc",
             "reverseEasing": "easeinoutsine",
             "skipForwardsMovement": true
+          },
+          {
+            "animationType": "rotation",
+            "variable": "!gun_inhand_equipped",
+            "centerPoint": [0.0,0.0,-0.5],
+            "axis": [90.0,0.0,0.0],
+            "offset": 0.0,
+            "clampMin": 0.0,
+            "clampMax": 0.0,
+            "duration": 20,
+            "forwardsEasing": "easeinback",
+            "reverseEasing": "easeoutback"
           }
         ]
       },
@@ -264,7 +290,7 @@
       {
         "pos": [0.0,0.09375,0.78125],
         "rot": [0.0,0.0,0.0],
-        "fovOverride": 20,
+        "fovOverride": 20.0,
         "mouseSensitivityOverride": 0.5,
         "animations": [
           {
@@ -280,6 +306,14 @@
             "offset": 0.0,
             "clampMin": 1.0,
             "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "gun_inhand_equipped",
+            "offset": 0.0,
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "forwardsDelay": 20
           },
           {
             "animationType": "inhibitor",
@@ -410,14 +444,14 @@
         "terminalVelocity": [1.0E-8,1.0E-8,1.0E-8],
         "activeAnimations": [
           {
-            "animationType": "inhibitor",
-            "variable": "gun_inhand_aiming",
+            "animationType": "visibility",
+            "variable": "gun_fired",
             "offset": 0.0,
             "clampMin": 1.0,
             "clampMax": 1.0
           },
           {
-            "animationType": "activator",
+            "animationType": "inhibitor",
             "variable": "gun_controller_firstperson",
             "offset": 0.0,
             "clampMin": 0.0,
@@ -425,10 +459,10 @@
           },
           {
             "animationType": "visibility",
-            "variable": "gun_fired",
+            "variable": "gun_inhand_aiming",
             "offset": 0.0,
-            "clampMin": 1.0,
-            "clampMax": 1.0
+            "clampMin": 0.0,
+            "clampMax": 0.0
           }
         ]
       }

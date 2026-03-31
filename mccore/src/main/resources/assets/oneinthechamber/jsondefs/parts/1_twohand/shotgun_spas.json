@@ -14,7 +14,6 @@
     "isTwoHanded": true,
     "isSemiAuto": true,
     "capacity": 1,
-    "fireDelay": 2,
     "reloadTime": 16,
     "muzzleVelocity": 450,
     "fireDelay": 18.0,
@@ -26,7 +25,7 @@
     "pitchSpeed": Infinity,
     "pitchRecoil": 4.0,
     "pitchRecovery": 4.0,
-    "pitchRecoveryTime": 8,
+    "pitchRecoveryTime": 6,
     "yawRecoil": 4.0,
     "lockMaxAngle": 0.0,
     "handHeldNormalOffset": [-0.05,-0.05,0.5625],
@@ -60,13 +59,27 @@
     {
       "subName": "",
       "name": "Shotgun",
-      "description": "Pump-action longarm",
+      "description": "Pump-action longarm\nmeow\n",
       "extraMaterialLists": [
         []
       ]
     }
   ],
   "variableModifiers": [
+    {
+      "variable": "ableToFire",
+      "animations": [
+        {
+          "animationType": "translation",
+          "variable": "gun_inhand_equipped",
+          "axis": [0.0,0.0,1.0],
+          "offset": 0.0,
+          "clampMin": 0.0,
+          "clampMax": 0.0,
+          "forwardsDelay": 15
+        }
+      ]
+    },
     {
       "variable": "yawRecoil",
       "animations": [
@@ -96,6 +109,16 @@
     {
       "variable": "pitchRecovery",
       "animations": [
+        {
+          "animationType": "translation",
+          "variable": "gun_firing",
+          "axis": [-1.0,0.0,0.0],
+          "offset": 1.0,
+          "clampMin": 0.0,
+          "clampMax": 0.0,
+          "forwardsDelay": 18,
+          "reverseDelay": 6
+        },
         {
           "animationType": "translation",
           "variable": "gun_inhand_aiming",
@@ -150,6 +173,30 @@
             "forwardsEasing": "easeoutcirc",
             "reverseEasing": "easeinoutsine",
             "skipForwardsMovement": true
+          },
+          {
+            "animationType": "rotation",
+            "variable": "!gun_inhand_equipped",
+            "centerPoint": [0.0,0.0,-0.5],
+            "axis": [-90.0,0.0,0.0],
+            "offset": 0.0,
+            "clampMin": 0.0,
+            "clampMax": 0.0,
+            "duration": 15,
+            "forwardsEasing": "easeinback",
+            "reverseEasing": "easeoutback"
+          },
+          {
+            "animationType": "rotation",
+            "variable": "!gun_inhand_equipped",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,0.0,-45.0],
+            "offset": 0.0,
+            "clampMin": 0.0,
+            "clampMax": 0.0,
+            "duration": 10,
+            "forwardsEasing": "easeinoutsine",
+            "reverseEasing": "easeinoutsine"
           }
         ]
       },
@@ -352,25 +399,25 @@
         ]
       },
       {
-        "type": "generic",
-        "isBright": true,
+        "type": "casing",
+        "stopsOnGround": true,
         "spawningOrientation": "entity",
-        "renderingOrientation": "player",
+        "renderingOrientation": "fixed",
         "quantity": 1,
         "duration": 120,
         "transparency": 1.0,
         "fadeOutTransparencyTime": 20,
-        "scale": 0.25,
-        "toScale": 0.25,
+        "scale": 0.75,
+        "toScale": 0.75,
         "hitboxSize": 0.1,
-        "texture": "minecraft:textures/items/redstone_dust.png",
         "color": "FFFFFF",
         "pos": [0.0,0.125,0.125],
-        "rot": [0.0,180,0.0],
-        "rotationRandomness": [0.0,0.0,0.0],
+        "rot": [0.0,0.0,0.0],
+        "rotationRandomness": [5.0,5.0,5.0],
+        "rotationVelocity": [-8.0,4.0,0.0],
         "initialVelocity": [-1.0,0.5,-0.25],
         "movementVelocity": [0.0,-0.02,0.0],
-        "terminalVelocity": [64,64,64],
+        "terminalVelocity": [64.0,64.0,64.0],
         "activeAnimations": [
           {
             "animationType": "visibility",
@@ -378,7 +425,7 @@
             "offset": 0.0,
             "clampMin": 1.0,
             "clampMax": 1.0,
-            "forwardsDelay": 5,
+            "forwardsDelay": 8,
             "skipReverseMovement": true
           }
         ]

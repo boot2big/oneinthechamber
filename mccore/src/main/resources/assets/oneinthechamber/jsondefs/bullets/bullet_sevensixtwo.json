@@ -5,8 +5,8 @@
     "seekerMaxAngle": 90.0,
     "quantity": 1,
     "diameter": 7.62,
-    "caseLength": 39.0,
     "damage": 6.0,
+    "caseLength": 39.0,
     "knockback": 0.4,
     "despawnTime": 100,
     "impactDespawnTime": 60
@@ -2417,6 +2417,7 @@
     "modelType": "obj"
   },
   "general": {
+    "stackSize": 64,
     "materialLists": [
       [
         "mts:mtsofficialpack.bullet762:1"

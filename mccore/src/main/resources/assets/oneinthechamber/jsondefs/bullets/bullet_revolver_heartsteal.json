@@ -10,7 +10,8 @@
     "damage": 2.14748365E9,
     "caseLength": 99.3,
     "armorPenetration": 2.14748365E9,
-    "despawnTime": 40
+    "despawnTime": 40,
+    "impactDespawnTime": 5
   },
   "definitions": [
     {
@@ -65,6 +66,35 @@
             "offset": 0.0,
             "clampMin": 0.0,
             "clampMax": 0.0
+          }
+        ]
+      },
+      {
+        "type": "generic",
+        "spawningOrientation": "world",
+        "renderingOrientation": "fixed",
+        "quantity": 1,
+        "duration": 120,
+        "transparency": 1.0,
+        "fadeOutTransparencyTime": 20,
+        "scale": 1.0,
+        "hitboxSize": 0.125,
+        "texture": "oneinthechamber:textures/particles/heart.png",
+        "model": "oneinthechamber:textures/particles/heart.obj",
+        "color": "FFFFFF",
+        "pos": [0.0,0.0,0.0],
+        "rot": [0.0,0.0,0.0],
+        "rotationRandomness": [180.0,180.0,180.0],
+        "initialVelocity": [0.0,1.0,1.0E-8],
+        "movementVelocity": [0.0,-0.02,0.0],
+        "terminalVelocity": [32.0,32.0,32.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "bullet_hit_entity",
+            "offset": 0.0,
+            "clampMin": 1.0,
+            "clampMax": 1.0
           }
         ]
       }

@@ -16,6 +16,7 @@
     "capacity": 1,
     "reloadTime": 20,
     "muzzleVelocity": 20,
+    "fireDelay": 25.0,
     "bulletSpreadFactor": 4.0,
     "diameter": 40.0,
     "maxCaseLength": 80.0,
@@ -34,7 +35,7 @@
         "muzzles": [
           {
             "pos": [0.0,0.03125,0.6875],
-            "rot": [0.0,0.0,0.0],
+            "rot": [-3.0,0.0,0.0],
             "center": [0.0,0.0,0.0]
           }
         ]
@@ -46,13 +47,27 @@
     {
       "subName": "",
       "name": "Grenade Launcher",
-      "description": "Heavy armament",
+      "description": "Heavy armament\nFrom the hit film \"TERMITE HATE HER\" with Sylvester Stallone!\n",
       "extraMaterialLists": [
         []
       ]
     }
   ],
   "variableModifiers": [
+    {
+      "variable": "ableToFire",
+      "animations": [
+        {
+          "animationType": "translation",
+          "variable": "gun_inhand_equipped",
+          "axis": [0.0,0.0,1.0],
+          "offset": 0.0,
+          "clampMin": 0.0,
+          "clampMax": 0.0,
+          "forwardsDelay": 25
+        }
+      ]
+    },
     {
       "variable": "yawRecoil",
       "animations": [
@@ -106,6 +121,13 @@
             "clampMax": 0.0
           },
           {
+            "animationType": "inhibitor",
+            "variable": "gun_inhand_aiming",
+            "offset": 0.0,
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
             "animationType": "rotation",
             "variable": "gun_fired",
             "centerPoint": [0.0,0.0,0.0],
@@ -129,6 +151,49 @@
             "forwardsEasing": "easeoutcirc",
             "reverseEasing": "easeinoutsine",
             "skipForwardsMovement": true
+          },
+          {
+            "animationType": "translation",
+            "variable": "!gun_inhand_equipped",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,-0.5,0.0],
+            "offset": 0.0,
+            "clampMin": 0.0,
+            "clampMax": 0.0,
+            "duration": 20,
+            "forwardsEasing": "easeinoutsine",
+            "reverseEasing": "easeinoutsine"
+          },
+          {
+            "animationType": "rotation",
+            "variable": "!gun_inhand_equipped",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [90.0,0.0,0.0],
+            "offset": 0.0,
+            "clampMin": 0.0,
+            "clampMax": 0.0,
+            "duration": 20,
+            "forwardsEasing": "easeinoutsine",
+            "reverseEasing": "easeinoutsine"
+          }
+        ]
+      },
+      {
+        "objectName": "resticle",
+        "applyAfter": "cuboid",
+        "animations": [
+          {
+            "animationType": "rotation",
+            "variable": "!gun_inhand_equipped",
+            "centerPoint": [0.0,0.0625,0.59375],
+            "axis": [-90.0,0.0,0.0],
+            "offset": 0.0,
+            "clampMin": 0.0,
+            "clampMax": 0.0,
+            "duration": 5,
+            "forwardsEasing": "easeincubic",
+            "reverseEasing": "easeoutcubic",
+            "reverseDelay": 15
           }
         ]
       },
@@ -138,15 +203,29 @@
         "animations": [
           {
             "animationType": "translation",
-            "variable": "gun_fired",
+            "variable": "gun_reload",
             "axis": [0.0,0.0,-0.125],
             "offset": 0.0,
             "clampMin": 0.0,
             "clampMax": 0.0,
-            "duration": 2,
-            "forwardsEasing": "easeoutcirc",
-            "reverseEasing": "easeinoutsine",
-            "skipForwardsMovement": true
+            "duration": 4,
+            "forwardsEasing": "easeincubic",
+            "reverseEasing": "easeoutcubic",
+            "forwardsDelay": 5,
+            "skipReverseMovement": true
+          },
+          {
+            "animationType": "translation",
+            "variable": "gun_reload",
+            "axis": [0.0,0.0,0.125],
+            "offset": 0.0,
+            "clampMin": 0.0,
+            "clampMax": 0.0,
+            "duration": 4,
+            "forwardsEasing": "easeincubic",
+            "reverseEasing": "easeoutcubic",
+            "forwardsDelay": 10,
+            "skipReverseMovement": true
           }
         ]
       }
@@ -202,6 +281,68 @@
           }
         ],
         "forceSound": true,
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 64.0,
+        "maxDistanceVolume": 0.0,
+        "conicalAngle": 0.0
+      },
+      {
+        "name": "oneinthechamber:shotgun_spas_cock_back",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_reload",
+            "offset": 0.0,
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "forwardsDelay": 5,
+            "skipReverseMovement": true
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "random",
+            "axis": [0.0,0.1,0.0],
+            "offset": 0.7,
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 64.0,
+        "maxDistanceVolume": 0.0,
+        "conicalAngle": 0.0
+      },
+      {
+        "name": "oneinthechamber:shotgun_spas_cock_forth",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_reload",
+            "offset": 0.0,
+            "clampMin": 1.0,
+            "clampMax": 1.0,
+            "forwardsDelay": 10,
+            "skipReverseMovement": true
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "random",
+            "axis": [0.0,0.1,0.0],
+            "offset": 0.7,
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          }
+        ],
         "minDistance": 0.0,
         "minDistanceVolume": 0.0,
         "middleDistance": 0.0,

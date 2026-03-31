@@ -16,6 +16,7 @@
     "capacity": 1,
     "reloadTime": 20,
     "muzzleVelocity": 25,
+    "fireDelay": 25.0,
     "bulletSpreadFactor": 3.0,
     "diameter": 125.0,
     "minCaseLength": 380.0,
@@ -47,7 +48,7 @@
     {
       "subName": "",
       "name": "Rocket Launcher",
-      "description": "Heavy armament",
+      "description": "Heavy armament\nFeed me my coins, Mr. Freeman...\n",
       "extraMaterialLists": [
         []
       ]
@@ -59,8 +60,17 @@
       "animations": [
         {
           "animationType": "translation",
-          "variable": "!gun_bullet_present",
+          "variable": "gun_inhand_equipped",
           "axis": [0.0,0.0,1.0],
+          "offset": 0.0,
+          "clampMin": 0.0,
+          "clampMax": 0.0,
+          "forwardsDelay": 40
+        },
+        {
+          "animationType": "translation",
+          "variable": "!gun_bullet_present",
+          "axis": [1.0,0.0,0.0],
           "offset": 0.0,
           "clampMin": 0.0,
           "clampMax": 0.0
@@ -68,8 +78,46 @@
       ]
     },
     {
+      "variable": "reloadCombined",
+      "animations": [
+        {
+          "animationType": "translation",
+          "variable": "gun_reload",
+          "axis": [0.0,0.0,1.0],
+          "offset": 0.0,
+          "clampMin": 0.0,
+          "clampMax": 0.0
+        },
+        {
+          "animationType": "translation",
+          "variable": "gun_bullet_present",
+          "axis": [0.0,1.0,0.0],
+          "offset": 0.0,
+          "clampMin": 0.0,
+          "clampMax": 0.0
+        },
+        {
+          "animationType": "translation",
+          "variable": "!gun_inhand_equipped",
+          "axis": [-1.0,0.0,0.0],
+          "offset": 1.0,
+          "clampMin": 0.0,
+          "clampMax": 0.0,
+          "forwardsDelay": 40
+        }
+      ]
+    },
+    {
       "variable": "yawRecoil",
       "animations": [
+        {
+          "animationType": "translation",
+          "variable": "gun_bullet_present",
+          "axis": [-1.0,0.0,0.0],
+          "offset": 1.0,
+          "clampMin": 0.0,
+          "clampMax": 0.0
+        },
         {
           "animationType": "translation",
           "variable": "gun_inhand_aiming",
@@ -85,6 +133,14 @@
       "animations": [
         {
           "animationType": "translation",
+          "variable": "gun_bullet_present",
+          "axis": [-1.0,0.0,0.0],
+          "offset": 1.0,
+          "clampMin": 0.0,
+          "clampMax": 0.0
+        },
+        {
+          "animationType": "translation",
           "variable": "gun_inhand_aiming",
           "axis": [-0.25,0.0,0.0],
           "offset": 1.0,
@@ -96,6 +152,14 @@
     {
       "variable": "pitchRecovery",
       "animations": [
+        {
+          "animationType": "translation",
+          "variable": "gun_bullet_present",
+          "axis": [-1.0,0.0,0.0],
+          "offset": 1.0,
+          "clampMin": 0.0,
+          "clampMax": 0.0
+        },
         {
           "animationType": "translation",
           "variable": "gun_inhand_aiming",
@@ -118,6 +182,13 @@
             "offset": 0.0,
             "clampMin": 0.0,
             "clampMax": 0.0
+          },
+          {
+            "animationType": "inhibitor",
+            "variable": "gun_inhand_aiming",
+            "offset": 0.0,
+            "clampMin": 1.0,
+            "clampMax": 1.0
           },
           {
             "animationType": "rotation",
@@ -143,6 +214,53 @@
             "forwardsEasing": "easeoutcirc",
             "reverseEasing": "easeinoutsine",
             "skipForwardsMovement": true
+          },
+          {
+            "animationType": "rotation",
+            "variable": "reloadCombined",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [67.5,0.0,0.0],
+            "offset": 0.0,
+            "clampMin": 0.0,
+            "clampMax": 0.0,
+            "duration": 10,
+            "forwardsEasing": "easeoutcirc",
+            "reverseEasing": "easeoutcubic"
+          },
+          {
+            "animationType": "translation",
+            "variable": "reloadCombined",
+            "axis": [-0.375,0.0,0.0],
+            "offset": 0.0,
+            "clampMin": 0.0,
+            "clampMax": 0.0,
+            "duration": 10,
+            "forwardsEasing": "easeoutcirc",
+            "reverseEasing": "easeoutcubic"
+          },
+          {
+            "animationType": "translation",
+            "variable": "!gun_inhand_equipped",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [0.0,-0.5,0.0],
+            "offset": 0.0,
+            "clampMin": 0.0,
+            "clampMax": 0.0,
+            "duration": 40,
+            "forwardsEasing": "easeinoutsine",
+            "reverseEasing": "easeinoutsine"
+          },
+          {
+            "animationType": "rotation",
+            "variable": "!gun_inhand_equipped",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [90.0,0.0,0.0],
+            "offset": 0.0,
+            "clampMin": 0.0,
+            "clampMax": 0.0,
+            "duration": 40,
+            "forwardsEasing": "easeinoutsine",
+            "reverseEasing": "easeinoutsine"
           }
         ]
       },
@@ -171,6 +289,13 @@
         "pos": [0.0,0.25,0.5],
         "rot": [0.0,0.0,0.0],
         "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_bullet_present",
+            "offset": 0.0,
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          },
           {
             "animationType": "visibility",
             "variable": "gun_inhand_aiming",

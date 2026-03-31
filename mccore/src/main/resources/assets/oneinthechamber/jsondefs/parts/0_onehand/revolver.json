@@ -13,9 +13,9 @@
     "handHeld": true,
     "isSemiAuto": true,
     "capacity": 1,
-    "fireDelay": 16,
     "reloadTime": 14,
     "muzzleVelocity": 250,
+    "fireDelay": 18.0,
     "bulletSpreadFactor": 2.0,
     "diameter": 12.7,
     "minCaseLength": 99.3,
@@ -47,13 +47,27 @@
     {
       "subName": "",
       "name": "Heavy Revolver",
-      "description": "Double-action handcannon",
+      "description": "Double-action handcannon\nWho knew noon got this high?\n",
       "extraMaterialLists": [
         []
       ]
     }
   ],
   "variableModifiers": [
+    {
+      "variable": "ableToFire",
+      "animations": [
+        {
+          "animationType": "translation",
+          "variable": "gun_inhand_equipped",
+          "axis": [0.0,0.0,1.0],
+          "offset": 0.0,
+          "clampMin": 0.0,
+          "clampMax": 0.0,
+          "forwardsDelay": 15
+        }
+      ]
+    },
     {
       "variable": "yawRecoil",
       "animations": [
@@ -83,6 +97,16 @@
     {
       "variable": "pitchRecovery",
       "animations": [
+        {
+          "animationType": "translation",
+          "variable": "gun_firing",
+          "axis": [-1.0,0.0,0.0],
+          "offset": 1.0,
+          "clampMin": 0.0,
+          "clampMax": 0.0,
+          "forwardsDelay": 18,
+          "reverseDelay": 4
+        },
         {
           "animationType": "translation",
           "variable": "gun_inhand_aiming",
@@ -137,6 +161,30 @@
             "forwardsEasing": "easeoutcirc",
             "reverseEasing": "easeinoutsine",
             "skipForwardsMovement": true
+          },
+          {
+            "animationType": "rotation",
+            "variable": "!gun_inhand_equipped",
+            "centerPoint": [0.0,0.0,-0.5],
+            "axis": [90.0,0.0,0.0],
+            "offset": 0.0,
+            "clampMin": 0.0,
+            "clampMax": 0.0,
+            "duration": 15,
+            "forwardsEasing": "easeinback",
+            "reverseEasing": "easeoutback"
+          },
+          {
+            "animationType": "rotation",
+            "variable": "!gun_inhand_equipped",
+            "centerPoint": [0.0,0.0,0.0],
+            "axis": [360.0,0.0,0.0],
+            "offset": 0.0,
+            "clampMin": 0.0,
+            "clampMax": 0.0,
+            "duration": 14,
+            "forwardsEasing": "easeinoutsine",
+            "reverseEasing": "easeinoutsine"
           }
         ]
       },

@@ -8,7 +8,9 @@
     "damage": 4.0,
     "caseLength": 32.0,
     "knockback": 1.0,
-    "despawnTime": 40
+    "despawnTime": 40,
+    "casingModel": "oneinthechamber:textures/particles/casing_bullet.obj",
+    "casingTexture": "oneinthechamber:textures/particles/casing_bullet.png"
   },
   "definitions": [
     {
