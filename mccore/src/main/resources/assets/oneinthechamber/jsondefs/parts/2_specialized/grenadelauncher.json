@@ -47,7 +47,7 @@
     {
       "subName": "",
       "name": "Grenade Launcher",
-      "description": "Heavy armament\nFrom the hit film \"TERMITE HATE HER\" with Sylvester Stallone!\n",
+      "description": "Heavy armament\nFrom the hit film \"TERMITE HATE HER\" with Sylvester Stallone!\n ",
       "extraMaterialLists": [
         []
       ]
@@ -161,8 +161,8 @@
             "clampMin": 0.0,
             "clampMax": 0.0,
             "duration": 20,
-            "forwardsEasing": "easeinoutsine",
-            "reverseEasing": "easeinoutsine"
+            "forwardsEasing": "easeinback",
+            "reverseEasing": "easeoutback"
           },
           {
             "animationType": "rotation",
@@ -173,8 +173,8 @@
             "clampMin": 0.0,
             "clampMax": 0.0,
             "duration": 20,
-            "forwardsEasing": "easeinoutsine",
-            "reverseEasing": "easeinoutsine"
+            "forwardsEasing": "easeinback",
+            "reverseEasing": "easeoutback"
           }
         ]
       },
@@ -190,10 +190,10 @@
             "offset": 0.0,
             "clampMin": 0.0,
             "clampMax": 0.0,
-            "duration": 5,
+            "duration": 10,
             "forwardsEasing": "easeincubic",
             "reverseEasing": "easeoutcubic",
-            "reverseDelay": 15
+            "reverseDelay": 10
           }
         ]
       },
@@ -255,12 +255,82 @@
     ],
     "sounds": [
       {
-        "name": "mtsofficialpack:aa37mm_fire_01",
-        "soundVariations": [
-          "mtsofficialpack:aa37mm_fire_01",
-          "mtsofficialpack:aa37mm_fire_02",
-          "mtsofficialpack:aa37mm_fire_03"
+        "name": "oneinthechamber:sfx_equip_heavy",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_inhand_equipped",
+            "offset": 0.0,
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
         ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "random",
+            "axis": [0.0,0.1,0.0],
+            "offset": 0.7,
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 64.0,
+        "maxDistanceVolume": 0.0,
+        "conicalAngle": 0.0
+      },
+      {
+        "name": "oneinthechamber:sfx_hammer",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_cooldown",
+            "offset": 0.0,
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "gun_firing",
+            "offset": 0.0,
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
+          {
+            "animationType": "visibility",
+            "variable": "gun_ammo_count",
+            "offset": 0.0,
+            "clampMin": 0.0,
+            "clampMax": 0.0,
+            "duration": 1,
+            "reverseDelay": 5,
+            "skipForwardsMovement": true
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "random",
+            "axis": [0.0,0.1,0.0],
+            "offset": 0.7,
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          }
+        ],
+        "minDistance": 0.0,
+        "minDistanceVolume": 0.0,
+        "middleDistance": 0.0,
+        "middleDistanceVolume": 0.0,
+        "maxDistance": 64.0,
+        "maxDistanceVolume": 0.0,
+        "conicalAngle": 0.0
+      },
+      {
+        "name": "oneinthechamber:grenadelauncher_fired",
         "activeAnimations": [
           {
             "animationType": "visibility",
