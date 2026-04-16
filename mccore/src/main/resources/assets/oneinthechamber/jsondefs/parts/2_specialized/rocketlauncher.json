@@ -28,6 +28,7 @@
     "pitchRecoveryTime": 10,
     "yawRecoil": 6.0,
     "lockMaxAngle": 180.0,
+    "disableInheritedMotion": true,
     "handHeldNormalOffset": [-0.05,-0.05,0.5625],
     "handHeldAimedOffset": [-0.05,-0.05,0.5625],
     "handHeldModelOffset": [0.0,0.1875,0.0],
@@ -336,10 +337,10 @@
           }
         ],
         "minDistance": 0.0,
-        "minDistanceVolume": 0.0,
-        "middleDistance": 0.0,
-        "middleDistanceVolume": 0.0,
-        "maxDistance": 64.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 4.0,
+        "middleDistanceVolume": 0.25,
+        "maxDistance": 12.0,
         "maxDistanceVolume": 0.0,
         "conicalAngle": 0.0
       },
@@ -382,10 +383,10 @@
           }
         ],
         "minDistance": 0.0,
-        "minDistanceVolume": 0.0,
-        "middleDistance": 0.0,
-        "middleDistanceVolume": 0.0,
-        "maxDistance": 64.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 8.0,
+        "middleDistanceVolume": 0.25,
+        "maxDistance": 16.0,
         "maxDistanceVolume": 0.0,
         "conicalAngle": 0.0
       },
@@ -412,9 +413,39 @@
         ],
         "forceSound": true,
         "minDistance": 0.0,
+        "minDistanceVolume": 1.0,
+        "middleDistance": 32.0,
+        "middleDistanceVolume": 0.5,
+        "maxDistance": 64.0,
+        "maxDistanceVolume": 0.0,
+        "conicalAngle": 0.0
+      },
+      {
+        "name": "oneinthechamber:sfx_distantshot_short",
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_fired",
+            "offset": 0.0,
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ],
+        "pitchAnimations": [
+          {
+            "animationType": "translation",
+            "variable": "random",
+            "axis": [0.0,0.1,0.0],
+            "offset": 0.95,
+            "clampMin": 0.0,
+            "clampMax": 0.0
+          }
+        ],
+        "forceSound": true,
+        "minDistance": 0.0,
         "minDistanceVolume": 0.0,
-        "middleDistance": 0.0,
-        "middleDistanceVolume": 0.0,
+        "middleDistance": 32.0,
+        "middleDistanceVolume": 1.0,
         "maxDistance": 64.0,
         "maxDistanceVolume": 0.0,
         "conicalAngle": 0.0
