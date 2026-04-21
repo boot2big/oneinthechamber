@@ -25,8 +25,8 @@
     {
       "subName": "",
       "modelName": "bullet_rocket",
-      "name": "Laser-Tracked Rocket",
-      "description": "Does not lock onto targets\nCorrects course mid-flight with assistance from operator",
+      "name": "Guided Rocket",
+      "description": "Tracks a given target, whether it is a lockable mob/vehicle or a laser-guided location",
       "textureNames": [
         "bullet_rocket"
       ],
@@ -60,7 +60,7 @@
         "conicalAngle": 0.0
       },
       {
-        "name": "oneinthechamber:rocket_beep",
+        "name": "oneinthechamber:rocket_beep_0",
         "activeAnimations": [
           {
             "animationType": "visibility",

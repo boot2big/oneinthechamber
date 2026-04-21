@@ -2,11 +2,11 @@
 {
 "modid": "oneinthechamber",
 "name": "One in the Chamber",
-"description": "test",
+"description": "Because my gun's always got...",
 "authorList": ["cowboycosmic"],
 "credits": "Darkura2001",
 "logoFile": "vingette.png",
 "mcversion": "1.12.2",
-"url": "google.com"
+"url": "https://modrinth.com/project/one-in-the-chamber/"
 }
 ]

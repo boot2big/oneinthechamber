@@ -13,6 +13,7 @@
     "handHeld": true,
     "isTwoHanded": true,
     "isSemiAuto": true,
+    "disableInheritedMotion": true,
     "capacity": 1,
     "reloadTime": 35,
     "muzzleVelocity": 250,
@@ -25,7 +26,6 @@
     "pitchRecoil": 8.0,
     "yawRecoil": 8.0,
     "lockMaxAngle": 0.0,
-    "disableInheritedMotion": true,
     "handHeldNormalOffset": [-0.05,-0.05,0.5625],
     "handHeldAimedOffset": [0.3125,0.125,0.4875],
     "handHeldModelOffset": [0.0,0.125,0.0625],
@@ -41,7 +41,25 @@
       }
     ]
   },
-  "parts": [],
+  "parts": [
+    {
+      "pos": [0.0,0.09375,0.0],
+      "maxValue": 10.0,
+      "types": [
+        "generic_gun_scope",
+        "generic_crafting_gun_scope"
+      ],
+      "defaultPart": "oneinthechamber:accessory_scope_default",
+      "customTypes": [
+        "",
+        "default"
+      ],
+      "applyAfter": "cuboid",
+      "constantValues": {
+        "accessory_slot_default": 1.0
+      }
+    }
+  ],
   "definitions": [
     {
       "subName": "",
@@ -228,7 +246,15 @@
       {
         "objectName": "scope",
         "applyAfter": "cuboid",
-        "animations": []
+        "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "accessory_part_default",
+            "offset": 0.0,
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
       },
       {
         "objectName": "scope_glint",
@@ -259,6 +285,13 @@
         "objectName": "scope_glint",
         "color": "FFF3CF",
         "brightnessAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "accessory_part_default",
+            "offset": 0.0,
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
           {
             "animationType": "translation",
             "variable": "distance_client",
@@ -294,6 +327,13 @@
         "fovOverride": 20.0,
         "mouseSensitivityOverride": 0.5,
         "animations": [
+          {
+            "animationType": "visibility",
+            "variable": "accessory_part_default",
+            "offset": 0.0,
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          },
           {
             "animationType": "visibility",
             "variable": "gun_inhand_aiming",

@@ -5,10 +5,6 @@
 modLoader="javafml"
 loaderVersion="[36,)"
 
-# The license for your pack. This is mandatory metadata and allows for easier comprehension of your redistributive properties.
-# Review your options at https://choosealicense.com/. All rights reserved is the default copyright stance, and is thus the default here.
-license="All rights reserved"
-
 [[mods]]
 # The ID of your pack.
 modId="oneinthechamber"
@@ -17,7 +13,7 @@ version="1.0.0"
 # Display name for the pack in the in-game mods list.
 displayName="Immersive Vehicles (MTS/IV) - One in the Chamber"
 # A URL for the "homepage" for this pack, displayed in the mod UI.
-displayURL="google.com"
+displayURL="https://modrinth.com/project/one-in-the-chamber/"
 # Pack logo.
 logoFile="vingette.png"
 # Authors list, put your name here so people know who made your pack.
@@ -26,6 +22,5 @@ authors="cowboycosmic"
 credits="Darkura2001"
 # The description text for the pack (multi line!)
 description='''
-test
+Because my gun's always got...
 '''
-# I had an anyerusm writing that, if you don't override the description... youtu.be/cnvaHW6zNLY?t=9
