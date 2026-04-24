@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Specification-Title: One in the Chamber
+Specification-Version: 1.0.0
+Implementation-Title: oneinthechamber
+Implementation-Version: 1.0.0
+Implementation-Vendor: fourdotsixvee8
+Implementation-License: GPL-3.0-or-later

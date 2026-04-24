@@ -1,0 +1,23 @@
+
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "cc",
+        "ba"
+    ],
+    "key": {
+        "a": {
+            "item": "minecraft:paper"
+        },
+        "b": {
+            "item": "minecraft:crafting_table"
+        },
+        "c": {
+            "item": "mts:mtsofficialpack.screws"
+        }
+    },
+    "result": {
+        "id": "mts:oneinthechamber.bench_gun",
+        "count": 1
+    }
+}

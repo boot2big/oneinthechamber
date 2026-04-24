@@ -390,6 +390,36 @@
             "clampMax": 1.0
           }
         ]
+      },
+      {
+        "type": "casing",
+        "stopsOnGround": true,
+        "spawningOrientation": "entity",
+        "renderingOrientation": "fixed",
+        "quantity": 1,
+        "duration": 120,
+        "transparency": 1.0,
+        "fadeOutTransparencyTime": 20,
+        "scale": 0.5,
+        "toScale": 0.5,
+        "hitboxSize": 0.1,
+        "color": "FFFFFF",
+        "pos": [-0.03125,0.046874,0.148438],
+        "rot": [0.0,0.0,0.0],
+        "rotationRandomness": [5.0,5.0,5.0],
+        "rotationVelocity": [-8.0,4.0,0.0],
+        "initialVelocity": [-1.0,0.5,-0.25],
+        "movementVelocity": [0.0,-0.02,0.0],
+        "terminalVelocity": [64.0,64.0,64.0],
+        "activeAnimations": [
+          {
+            "animationType": "visibility",
+            "variable": "gun_fired",
+            "offset": 0.0,
+            "clampMin": 1.0,
+            "clampMax": 1.0
+          }
+        ]
       }
     ],
     "modelType": "obj"

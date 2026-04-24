@@ -8,7 +8,9 @@
     "diameter": 12.7,
     "damage": 0.01,
     "caseLength": 99.3,
-    "despawnTime": 40
+    "despawnTime": 1,
+    "casingModel": "oneinthechamber:textures/particles/casing_bullet.obj",
+    "casingTexture": "oneinthechamber:textures/particles/casing_bullet.png"
   },
   "definitions": [
     {

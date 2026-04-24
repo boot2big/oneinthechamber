@@ -1,0 +1,20 @@
+
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "bab",
+        " ab"
+    ],
+    "key": {
+        "a": {
+            "item": "mts:mtsofficialpack.screws"
+        },
+        "b": {
+            "tag": "forge:ingots/iron"
+        }
+    },
+    "result": {
+        "item": "mts:oneinthechamber.accessory_stock_default",
+        "count": 1
+    }
+}

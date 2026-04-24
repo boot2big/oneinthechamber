@@ -11,7 +11,9 @@
     "caseLength": 99.3,
     "armorPenetration": 2.14748365E9,
     "despawnTime": 40,
-    "impactDespawnTime": 5
+    "impactDespawnTime": 5,
+    "casingModel": "oneinthechamber:textures/particles/casing_bullet.obj",
+    "casingTexture": "oneinthechamber:textures/particles/casing_bullet.png"
   },
   "definitions": [
     {

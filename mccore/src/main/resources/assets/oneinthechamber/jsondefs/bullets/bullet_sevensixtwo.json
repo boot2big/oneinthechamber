@@ -8,8 +8,10 @@
     "damage": 6.0,
     "caseLength": 39.0,
     "knockback": 0.4,
-    "despawnTime": 100,
-    "impactDespawnTime": 60
+    "despawnTime": 40,
+    "impactDespawnTime": 60,
+    "casingModel": "oneinthechamber:textures/particles/casing_bullet.obj",
+    "casingTexture": "oneinthechamber:textures/particles/casing_bullet.png"
   },
   "definitions": [
     {

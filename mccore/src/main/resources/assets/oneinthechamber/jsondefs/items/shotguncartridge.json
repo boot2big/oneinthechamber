@@ -4,7 +4,7 @@
         "description": "So devoid of 'munition, yet so full of potential...",
         "stackSize": 64,
         "materials": [
-        "tags:nugget/iron:1",
+        "oredict:nuggetIron:1",
         "minecraft:paper:2"
         ],
         "type": "none"

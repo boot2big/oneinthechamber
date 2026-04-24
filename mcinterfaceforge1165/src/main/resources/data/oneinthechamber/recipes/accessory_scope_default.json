@@ -1,0 +1,24 @@
+
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "aba",
+        "c c",
+        "aba"
+    ],
+    "key": {
+        "a": {
+            "item": "mts:mtsofficialpack.screws"
+        },
+        "b": {
+            "item": "minecraft:glass_pane"
+        },
+        "c": {
+            "tag": "forge:ingots/iron"
+        }
+    },
+    "result": {
+        "item": "mts:oneinthechamber.accessory_scope_default",
+        "count": 1
+    }
+}

@@ -1,0 +1,24 @@
+
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "cab",
+        " aa",
+        " ba"
+    ],
+    "key": {
+        "a": {
+            "tag": "forge:nuggets/iron"
+        },
+        "b": {
+            "item": "mts:mtsofficialpack.screws"
+        },
+        "c": {
+            "item": "minecraft:lever"
+        }
+    },
+    "result": {
+        "item": "mts:oneinthechamber.crafting_handle",
+        "count": 1
+    }
+}

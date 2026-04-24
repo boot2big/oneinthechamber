@@ -4,6 +4,7 @@
 # Forge settings, don't touch!
 modLoader="javafml"
 loaderVersion="[36,)"
+license="GPL-3.0-or-later"
 
 [[mods]]
 # The ID of your pack.

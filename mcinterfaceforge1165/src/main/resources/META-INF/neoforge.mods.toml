@@ -1,14 +1,6 @@
-# File required to load packs as Forge mods.
-# Find more information on toml format v0.5.0 here:  https://github.com/toml-lang/toml
-
-# Forge settings, don't touch!
 modLoader="javafml"
 loaderVersion="[4,)"
-license="GNU GPL 3.0"
-
-# The license for your pack. This is mandatory metadata and allows for easier comprehension of your redistributive properties.
-# Review your options at https://choosealicense.com/. All rights reserved is the default copyright stance, and is thus the default here.
-license="All rights reserved"
+license="GPL-3.0-or-later"
 
 [[mods]]
 # The ID of your pack.
@@ -29,7 +21,6 @@ credits="Darkura2001"
 description='''
 Because my gun's always got...
 '''
-# I had an anyerusm writing that, if you don't override the description... youtu.be/cnvaHW6zNLY?t=9
 
 [[dependencies.mtsofficialpack]]
     modId="mts"

@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " b ",
+        " b ",
+        " a "
+    ],
+    "key": {
+        "a": {
+            "tag": "forge:nuggets/iron"
+        },
+        "b": {
+            "item": "minecraft:paper"
+        }
+    },
+    "result": {
+        "item": "mts:oneinthechamber.shotguncartridge",
+        "count": 1
+    }
+}
