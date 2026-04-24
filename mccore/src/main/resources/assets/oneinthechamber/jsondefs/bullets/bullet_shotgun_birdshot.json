@@ -2709,8 +2709,14 @@
     "stackSize": 32,
     "materialLists": [
       [
-        "oredict:nuggetIron:2",
-        "minecraft:gunpowder:0:1"
+      "oredict:nuggetIron:6",
+        "minecraft:gunpowder:2",
+        "mts:oneinthechamber.shotguncartridge:1"
+      ]
+    ],
+    "returnedMaterialLists": [
+      [
+        "mts:oneinthechamber.bullet_shotgun_birdshot:1"
       ]
     ],
     "radarWidth": 0.0,

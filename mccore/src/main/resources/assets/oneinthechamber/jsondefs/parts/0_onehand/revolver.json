@@ -3,6 +3,7 @@
     "type": "gun_hand_standard",
     "width": 0.125,
     "height": 0.125,
+    "canBeRemovedByHand": true,
     "forwardsDamageMultiplier": 1.0
   },
   "gun": {
@@ -503,9 +504,11 @@
     "health": 100,
     "materialLists": [
       [
-        "oredict:ingotIron:1",
+        "mts:oneinthechamber.crafting_handle:0:1",
+        "oredict:ingotIron:3",
+        "mts:mtsofficialpack.spring:0:1",
         "mts:mtsofficialpack.metaltube:0:1",
-        "minecraft:stone_button:0:1"
+        "mts:mtsofficialpack.screws:0:3"
       ]
     ],
     "radarWidth": 0.0,

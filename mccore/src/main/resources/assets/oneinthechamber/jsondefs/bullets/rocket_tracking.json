@@ -1763,8 +1763,16 @@
     "stackSize": 4,
     "materialLists": [
       [
-        "oredict:nuggetIron:2",
-        "minecraft:gunpowder:0:1"
+        "mts:mtsofficialpack.fuzeproxy:1",
+        "mts:mtsofficialpack.circuit:1",
+        "mts:mtsofficialpack.explosives:1",
+        "mts:mtsofficialpack.metaltube:1",
+        "mts:mtsofficialpack.solidfuel:1"
+      ]
+    ],
+    "returnedMaterialLists": [
+      [
+        "mts:oneinthechamber.rocket_tracking:1"
       ]
     ],
     "radarWidth": 0.0,

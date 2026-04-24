@@ -1661,8 +1661,14 @@
     "stackSize": 8,
     "materialLists": [
       [
-        "oredict:nuggetIron:2",
-        "minecraft:gunpowder:0:1"
+        "oredict:nuggetIron:4",
+        "mts:mtsofficialpack.fuzeimpact:1",
+        "mts:mtsofficialpack.explosives:1"
+      ]
+    ],
+    "returnedMaterialLists": [
+      [
+        "mts:oneinthechamber.grenade:1"
       ]
     ],
     "radarWidth": 0.0,

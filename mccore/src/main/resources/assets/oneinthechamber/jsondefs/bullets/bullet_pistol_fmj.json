@@ -2310,8 +2310,14 @@
     "stackSize": 64,
     "materialLists": [
       [
-        "oredict:nuggetIron:2",
-        "minecraft:gunpowder:0:1"
+        "tags:nuggets/gold:1",
+        "minecraft:gunpowder:1",
+        "mts:mtsofficialpack.smallarmscartridge:1"
+      ]
+    ],
+    "returnedMaterialLists": [
+      [
+        "mts:oneinthechamber.bullet_pistol_fmj:7"
       ]
     ],
     "radarWidth": 0.0,

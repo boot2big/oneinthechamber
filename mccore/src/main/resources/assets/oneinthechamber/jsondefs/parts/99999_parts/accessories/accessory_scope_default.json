@@ -1,6 +1,8 @@
 {
   "generic": {
-    "type": "generic_crafting_gun_scope"
+    "type": "generic_crafting_gun_scope",
+    "width": 0.125,
+    "height": 0.0625
   },
   "parts": [],
   "definitions": [
@@ -9,6 +11,7 @@
       "name": "Scope",
       "description": "Steady, steady...\n \nAllows for zooming in when aiming\nCan be installed on certain weapons",
       "extraMaterialLists": [
+        [],
         []
       ]
     }
@@ -181,7 +184,7 @@
     "health": 10,
     "materialLists": [
       [
-        "tags:ingots/iron:2",
+        "tags:ingots/iron:3",
         "mts:mtsofficialpack.screws:4",
         "minecraft:glass_pane:2"
       ],

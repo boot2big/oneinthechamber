@@ -72,8 +72,14 @@
     "stackSize": 48,
     "materialLists": [
       [
-        "oredict:nuggetIron:2",
-        "minecraft:gunpowder:0:1"
+        "tags:ingots/iron:1",
+        "minecraft:gunpowder:2",
+        "mts:mtsofficialpack.basecartridge:1"
+      ]
+    ],
+    "returnedMaterialLists": [
+      [
+        "mts:oneinthechamber.bullet_revolver_standard:3"
       ]
     ],
     "radarWidth": 0.0,

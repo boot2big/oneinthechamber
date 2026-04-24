@@ -3,6 +3,7 @@
     "type": "gun_hand_heavy",
     "width": 0.125,
     "height": 0.125,
+    "canBeRemovedByHand": true,
     "forwardsDamageMultiplier": 1.0
   },
   "gun": {
@@ -554,9 +555,12 @@
     "health": 100,
     "materialLists": [
       [
-        "oredict:ingotIron:1",
-        "mts:mtsofficialpack.metaltube:0:1",
-        "minecraft:stone_button:0:1"
+        "mts:oneinthechamber.crafting_handle:0:1",
+        "oredict:ingotIron:6",
+        "mts:mtsofficialpack.piston:0:1",
+        "mts:mtsofficialpack.screws:0:6",
+        "mts:mtsofficialpack.metaltube:0:2",
+        "mts:mtsofficialpack.processor:0:1"
       ]
     ],
     "radarWidth": 0.0,

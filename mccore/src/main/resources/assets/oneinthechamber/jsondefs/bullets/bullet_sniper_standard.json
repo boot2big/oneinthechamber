@@ -2306,8 +2306,14 @@
     "stackSize": 16,
     "materialLists": [
       [
-        "oredict:nuggetIron:2",
-        "minecraft:gunpowder:0:1"
+        "tags:ingots/gold:1",
+        "minecraft:gunpowder:2",
+        "mts:mtsofficialpack.basecartridge:1"
+      ]
+    ],
+    "returnedMaterialLists": [
+      [
+        "mts:oneinthechamber.bullet_sniper_standard:3"
       ]
     ],
     "radarWidth": 0.0,

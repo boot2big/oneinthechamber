@@ -360,9 +360,12 @@
     "health": 100,
     "materialLists": [
       [
-        "oredict:ingotIron:1",
-        "mts:mtsofficialpack.metaltube:0:1",
-        "minecraft:stone_button:0:1"
+        "mts:oneinthechamber.crafting_handle:0:1",
+        "oredict:ingotIron:4",
+        "mts:mtsofficialpack.screws:0:2",
+        "mts:mtsofficialpack.metaltube:0:2",
+        "minecraft:bucket:0:1",
+        "minecraft:flint_and_steel:0:1"
       ]
     ],
     "radarWidth": 0.0,

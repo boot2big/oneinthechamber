@@ -1,6 +1,8 @@
 {
   "generic": {
-    "type": "generic_crafting_gun_stock"
+    "type": "generic_crafting_gun_stock",
+    "width": 0.125,
+    "height": 0.0625
   },
   "parts": [],
   "definitions": [
@@ -65,7 +67,7 @@
       }
     ],
     "particles": [],
-    "modelType": "obj"
+    "modelType": "none"
   },
   "general": {
     "name": "Stock",

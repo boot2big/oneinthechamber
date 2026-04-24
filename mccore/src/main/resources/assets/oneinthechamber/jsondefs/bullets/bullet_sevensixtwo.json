@@ -21,6 +21,7 @@
         "bullet_tracer"
       ],
       "extraMaterialLists": [
+        [],
         []
       ]
     }
@@ -2420,10 +2421,18 @@
     "stackSize": 64,
     "materialLists": [
       [
+        "tags:nuggets/iron:1",
+        "minecraft:gunpowder:1",
+        "mts:mtsofficialpack.smallarmscartridge:1"
+      ],
+      [
         "mts:mtsofficialpack.bullet762:1"
       ]
     ],
     "returnedMaterialLists": [
+      [
+        "mts:oneinthechamber.bullet_sevensixtwo:1"
+      ],
       [
         "mts:oneinthechamber.bullet_sevensixtwo:255"
       ]

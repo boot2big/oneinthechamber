@@ -1,0 +1,109 @@
+{
+  "generic": {
+    "type": "generic_furniture_single",
+    "canBeRemovedByHand": true,
+    "canBePlacedOnGround": true,
+    "width": 1.0,
+    "height": 0.75
+  },
+  "interactable": {
+    "interactionType": "crafting_bench",
+    "crafting": {
+      "itemTypes": [
+        "part",
+        "bullet"
+      ],
+      "partTypes": [
+        "gun"
+      ]
+    }
+  },
+  "collisionGroups": [
+    {
+      "collisionTypes": [
+        "attack",
+        "click",
+        "entity"
+      ],
+      "collisions": [
+        {
+          "pos": [0.0,0.4375,0.0],
+          "width": 0.875,
+          "height": 0.875
+        }
+      ],
+      "animations": []
+    }
+  ],
+  "parts": [
+    {
+      "pos": [0.0,1.125,0.0],
+      "rot": [0.0,-90.0,0.0],
+      "minValue": -215.99,
+      "maxValue": 426.02,
+      "types": [
+        "gun_hand_standard",
+        "gun_hand_handgun",
+        "gun_hand_pistol",
+        "gun_hand_rifle",
+        "gun_hand_longarm",
+        "gun_hand_shotgun",
+        "gun_handheld_rocket",
+        "gun_hand_heavy",
+        "gun_hand_sprayer",
+        "gun_hand_sign_protest",
+        "gun_fixed_autocannon",
+        "gun_handheld_multipurpose"
+      ],
+      "customTypes": [
+        "",
+        "handheld"
+      ],
+      "linkedParts": [],
+      "animations": [
+        {
+          "animationType": "translation",
+          "variable": "20_40_20_cycle",
+          "axis": [0.0,0.03125,0.0],
+          "duration": 40,
+          "offset": 0.0,
+          "clampMin": 0.0,
+          "clampMax": 0.0,
+            "forwardsEasing": "easeinoutsine",
+            "reverseEasing": "easeinoutsine"
+        }
+      ]
+    }
+  ],
+  "definitions": [
+    {
+      "subName": "",
+      "name": "Gun Modification Bench",
+      "description": "Place a gun onto this bench to modify it, without having someone else hold the gun up for you",
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "constantValues": {
+    "isGunModificationBench": 1.0,
+    "part_isOnBench": 1.0
+  },
+  "rendering": {
+    "lightObjects": [],
+    "particles": [],
+    "modelType": "obj"
+  },
+  "general": {
+    "health": 20,
+    "materialLists": [
+      [
+        "minecraft:crafting_table:1",
+        "minecraft:paper:1",
+        "mts:mtsofficialpack.screws:2"
+      ]
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0
+  }
+}

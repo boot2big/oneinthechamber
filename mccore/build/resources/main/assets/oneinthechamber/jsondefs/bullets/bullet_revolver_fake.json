@@ -1,0 +1,43 @@
+{
+  "bullet": {
+    "types": [],
+    "seekerRange": 1024,
+    "seekerMaxAngle": 90.0,
+    "isBlank": true,
+    "quantity": 1,
+    "diameter": 12.7,
+    "damage": 0.01,
+    "caseLength": 99.3,
+    "despawnTime": 40
+  },
+  "definitions": [
+    {
+      "hideOnCreativeTab": true,
+      "subName": "",
+      "modelName": "bullet_tracer",
+      "name": "Revolver Blank Ammo",
+      "textureNames": [
+        "bullet_tracer"
+      ],
+      "extraMaterialLists": [
+        []
+      ]
+    }
+  ],
+  "rendering": {
+    "animatedObjects": [],
+    "lightObjects": [],
+    "sounds": [],
+    "particles": [],
+    "modelType": "obj"
+  },
+  "general": {
+    "stackSize": 64,
+    "materialLists": [
+      []
+    ],
+    "radarWidth": 0.0,
+    "radarRange": 0.0,
+    "type": "bullet"
+  }
+}
